@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tela de login</title>
+  <style>
+    * {
+      margin: 0%;
+      box-sizing: border-box;
+    }
+
+    #centro {
+      display: flex;
+
+    }
+
+    #one {
+      height: 450px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      background-color: blueviolet;
+      width: 550px;
+
+    }
+
+    #two {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      padding: 20px;
+      width: 350px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border: 2px solid;
+    }
+
+    body {
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body style="background-color: blueviolet;">
+  <div id="centro">
+    <div id="one"
+      style="background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIEBQMG/8QAOhAAAgIBAgMFBgMFCQEAAAAAAAECEQMhMQQScQUiQZHwE1FhgaGxwdHhBhRicoIVM0JSU2Oi0vEj/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECBAMFBv/EAB8RAQEBAQADAAIDAAAAAAAAAAABEQIDEjEhUQQTYf/aAAwDAQACEQMRAD8Ajis+SUvZcLByk3pLkbb99L156nEzqUpOUpNze7k7b+fT1ujt4c2bgeIhxHCzUMuO+WVJ1p+Xqjm8QnLJKc1bk7k/jfr/ANPquJler64wrg8+aDnhwZJxjfNKMXSpW9dtlfpVhyR3/D168z6zsXtviezOF4rs/heGw5Xxq5HzRtt7V7mqtfO9rr5zisM4ZcmPJDknGTUo1s/Fevh8C/H31erOon87jXLsDC/2Xl2z+/Y1k9py/uzi7rVflrovofPSjq3RryQrTx8fv69V4yjfhR28c6m7dVJXjGUsU1OEpRktnF0asPGK3zp45PeeJKpfzQej+hmmqI3Z2vMv1WOlajBzvkxt17Xh9cb/AJoPZ+XQjlpPI8cZRjr7Xh3yuPVeH06mXDkninzY5uMtrNEMmOUudSfD5VtPHfL5LVfLyJ9cVI9VmyZY/wB7DiY/5c673nv5MqGKpcywcXia29ncvLRP6sShky258Pizfx4ppP6aeaGsWHG7zQnBLwnxCd/0xhf2D4uPVQn4y4ifv5+Ev62WsWLaUY37/ZOL/wCM0eS4nh8S/wDjw8JSXjKOn1bf1RS7R4lLuyUF7oKl5BnV+LkrVUJvvZlJf7jc/vFv6nr7G0lLbwV35bvyowrtHi/9aXmeuPjubTNjirWsorfqvXRivHUVle04LXXrb0+fp/FoItq07+Nr5fpr0fgynK9Luqp3r8Pvv08LSivBdK/T8Pg17gi4l8OnrGSSfg03+H6gemPmauLdfBy/Br66gX+Vu9nxvmqtXVUnfr8fiY+N4TLw0/Z5sTxypNJx8K/L1R1s2OuZLy/T15UZu0s/EcdnebiZyyZaSt+73beuuh50t3/GCy6ydh9o/wBj9pw4uWNZYxvmg43zee2ta7/PR5f2u7bh2t2j+95EsCcUvZtrR+Ne/X14rldr9pwxOWHhmnl2lJbR/U4E5SnJynJyk3bbe5348HN7/sv1z9Z7a35OLxX3Ll8q9evnnlnlNuopJnhRSNM5i4ptvd2NCKRaoaKRKRaBcOk/AqOmwkUkCoaLRKKQ1xS2KRKKQ1tXDZLXJJ6LbS9P0+1nu9nzeG9v7t6eej30Zhi2pJptNaprwNWPiI/4lyv3rb5Vqum3wRHU/SsaVBtaq+q/OL+4HnB4aesd/wCH/oBOHj6fiO1eyoxb/tHhGvHlyxd/K/t+dfJ9tftIs3Ni7PUlF75ZKn/SvD11fzsl3n1FRy48HPLz71aVMaQx0d8GEikgSKSA5AkUhIaGuRSKQkMaopFISGgXFIpCRSBZopEotDVDRSEikNcXDYYQ2ARuC13n1Cimu8+oUQ87CoaGOhmVDQUNIFSGkNBRSQKCKQDoZyGkUhIqgXDQ0JFIazKQkVQ4qGi0hJFIFRUNhhBaAI8cWS7z6hRUl3n1CiWHE0CRVDoDwqGh0AzwJFANAcgGCRSBcgKQki6GqEWhDBUhopAikhqgRSEikrGuLhsA47AI3Ha7z6hRTXefUCWJI6GNIDwqHQ6ADwJBRVDSA8JIdDGhqCRQIYKkA0hpDocUaWhSEloUC5AUgSKQzio7AOOwCNypLV9RUW13n1YUiWTEfIdFUFAeFQx0OgMqChpDSGZIpDoAOQFJCSKSHisCRSQJFAqQJDQDoapDRSBDQLkXDYAjsMRuW13n1FRbWr6hQmTEUOiqCgPCoKKSHQDCQUOhpAeEigopIZkUCQ6BWBDBIaQ1SBFoEhpAqQIYIoFKjsBUFoIRuc931EW13n1EJmSOh0MYxNDodDoDwkh0OgoDwqGMaQHCKS1CikhmKGlQDSBUgGkBSXuBWAaQJFIapFR2AcVoAsNz3u+ogATMBgAAIdAAGBoAAKoAAZw1sMABRlJaAAKhopIAGoN1ZiyZJytuTVVs6ADn5LZGb+RbPjyjPJWmXIukgADhbWb2v7f/2Q==); background-repeat: no-repeat; background-size: 650px;">
+      <h1 style="padding: 30px; color: white;">welcome back</h1>
+      <p style="color: white; padding: 30px;">you can sign in to access with your existing account.</p>
+    </div>
+    <div id="two">
+      <h1>sign in</h1>
+      <input type="text" style="border: 2px solid ; color: gray;border-radius: 50px;" placeholder="username or email">
+      <input type="password" name="" id="" style="border: 2px solid;color: gray; border-radius: 50px;"
+        placeholder="password">
+      <input type="checkbox" name="" id="">remember me^
+      <a href="website">forgot password?</a>
+      <a href="entrada"
+        style="float: left; width: 100px; background-color: blueviolet;  border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; color: white; padding: 10px; margin: 10px; width: 100%;">
+        sign
+        in</a>
+      <p>new here?</p>
+      <a href="webs">create a account</a>
+    </div>
+  </div>
+</body>
+
+</html>
